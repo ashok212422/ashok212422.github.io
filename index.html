@@ -20,7 +20,38 @@
 
     <meta name="author" content="Ashok Choudhary">
 
+    <meta name="theme-color" content="#071a3d">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Ashok Choudhary | CFD & Combustion Researcher">
+    <meta property="og:description" content="CFD, hydrogen combustion and engineering research portfolio of Ashok Choudhary.">
+    <meta property="og:url" content="https://ashok212422.github.io/">
+    <meta property="og:image" content="https://ashok212422.github.io/assets/images/ashok-choudhary.png">
+    <meta name="twitter:card" content="summary_large_image">
+
+    <link rel="canonical" href="https://ashok212422.github.io/">
+
     <title>Ashok Choudhary | CFD & Combustion Researcher</title>
+    <link
+    rel="icon"
+    href="assets/images/favicon.svg"
+    type="image/svg+xml"
+>
+    <script>
+    /*
+     * Apply the saved/system theme before rendering the page.
+     * This prevents a light-theme flash when dark mode is selected.
+     */
+    const savedTheme = localStorage.getItem("portfolio-theme");
+
+    const preferredTheme = window.matchMedia(
+        "(prefers-color-scheme: dark)"
+    ).matches
+        ? "dark"
+        : "light";
+
+    document.documentElement.dataset.theme =
+        savedTheme || preferredTheme;
+</script>
 
     <link rel="stylesheet" href="style.css">
 
@@ -30,40 +61,66 @@
 <body>
     <!-- Navigation -->
     <header class="site-header">
-        <a href="#home" class="logo" aria-label="Ashok Choudhary home">
-            AC
-        </a>
+    <a
+        href="#home"
+        class="logo"
+        aria-label="Ashok Choudhary home"
+    >
+        AC
+    </a>
 
+    <button
+        class="menu-button"
+        type="button"
+        aria-label="Open navigation menu"
+        aria-expanded="false"
+        aria-controls="primary-navigation"
+    >
+        <span></span>
+        <span></span>
+        <span></span>
+    </button>
+
+    <nav
+        id="primary-navigation"
+        class="navigation"
+    >
+        <a href="#about">About</a>
+        <a href="#expertise">Expertise</a>
+        <a href="#experience">Experience</a>
+        <a href="#research">Research</a>
+        <a href="#projects">Projects</a>
+        <a href="#code-workflow">Workflow</a>
+        <a href="#contact">Contact</a>
+    </nav>
+
+    <div class="header-actions">
         <button
-            class="menu-button"
+            id="theme-toggle"
+            class="theme-toggle"
             type="button"
-            aria-label="Open navigation menu"
-            aria-expanded="false"
-            aria-controls="primary-navigation"
+            aria-label="Switch to dark theme"
+            title="Change color theme"
         >
-            <span></span>
-            <span></span>
-            <span></span>
+            <span
+                class="theme-icon"
+                aria-hidden="true"
+            >
+                ☾
+            </span>
         </button>
-
-        <nav id="primary-navigation" class="navigation">
-            <a href="#about">About</a>
-            <a href="#expertise">Expertise</a>
-            <a href="#experience">Experience</a>
-            <a href="#research">Research</a>
-            <a href="#projects">Projects</a>
-            <a href="#contact">Contact</a>
-        </nav>
 
         <a
             class="header-resume"
             href="assets/documents/Ashok_Choudhary_Resume.pdf"
             target="_blank"
+            rel="noopener"
         >
             View Résumé
             <span aria-hidden="true">↗</span>
         </a>
-    </header>
+    </div>
+</header>
 
     <main>
         <!-- Hero -->
@@ -246,6 +303,149 @@
                 </div>
             </div>
         </section>
+<!-- Technical tools -->
+<section
+    class="tools-stack section-container section-spacing"
+    aria-labelledby="tools-title"
+>
+    <div class="tools-heading">
+        <div>
+            <p class="section-number">
+                03 / TECHNICAL STACK
+            </p>
+
+            <h2 id="tools-title">
+                Tools I use to move from
+                <em>equations to engineering insight.</em>
+            </h2>
+        </div>
+
+        <p>
+            A practical scientific-computing stack supporting
+            simulation, post-processing, validation, technical
+            communication and reproducible engineering workflows.
+        </p>
+    </div>
+
+    <div class="tools-grid">
+        <article class="tool-card">
+            <span class="tool-symbol">OF</span>
+
+            <div>
+                <p class="tool-category">SIMULATION</p>
+                <h3>OpenFOAM</h3>
+                <p>
+                    Finite-volume CFD case development,
+                    solver workflows and field analysis.
+                </p>
+            </div>
+        </article>
+
+        <article class="tool-card">
+            <span class="tool-symbol">PD</span>
+
+            <div>
+                <p class="tool-category">COMBUSTION CFD</p>
+                <h3>PDRFoam</h3>
+                <p>
+                    Hydrogen deflagration, congestion,
+                    flame acceleration and overpressure modelling.
+                </p>
+            </div>
+        </article>
+
+        <article class="tool-card">
+            <span class="tool-symbol">PV</span>
+
+            <div>
+                <p class="tool-category">POST-PROCESSING</p>
+                <h3>ParaView</h3>
+                <p>
+                    Scientific visualization, slicing,
+                    iso-surfaces, probes and transient field analysis.
+                </p>
+            </div>
+        </article>
+
+        <article class="tool-card">
+            <span class="tool-symbol">PY</span>
+
+            <div>
+                <p class="tool-category">SCIENTIFIC COMPUTING</p>
+                <h3>Python</h3>
+                <p>
+                    NumPy, Pandas, Matplotlib, OpenCV
+                    and automated data-processing workflows.
+                </p>
+            </div>
+        </article>
+
+        <article class="tool-card">
+            <span class="tool-symbol">SR</span>
+
+            <div>
+                <p class="tool-category">COMPUTER VISION</p>
+                <h3>SEA-RAFT</h3>
+                <p>
+                    Optical-flow extraction and time-resolved
+                    combustion-image velocity diagnostics.
+                </p>
+            </div>
+        </article>
+
+        <article class="tool-card">
+            <span class="tool-symbol">ML</span>
+
+            <div>
+                <p class="tool-category">DATA ANALYSIS</p>
+                <h3>MATLAB</h3>
+                <p>
+                    Signal processing, engineering calculations,
+                    comparison plots and numerical analysis.
+                </p>
+            </div>
+        </article>
+
+        <article class="tool-card">
+            <span class="tool-symbol">LX</span>
+
+            <div>
+                <p class="tool-category">COMPUTING</p>
+                <h3>Linux & HPC</h3>
+                <p>
+                    Parallel CFD execution, shell workflows,
+                    cluster job submission and simulation management.
+                </p>
+            </div>
+        </article>
+
+        <article class="tool-card">
+            <span class="tool-symbol">TX</span>
+
+            <div>
+                <p class="tool-category">DOCUMENTATION</p>
+                <h3>LaTeX & Overleaf</h3>
+                <p>
+                    Journal manuscripts, conference papers,
+                    equations and technical documentation.
+                </p>
+            </div>
+        </article>
+
+        <article class="tool-card">
+            <span class="tool-symbol">CA</span>
+
+            <div>
+                <p class="tool-category">ENGINEERING DESIGN</p>
+                <h3>AutoCAD & CATIA</h3>
+                <p>
+                    Foundational CAD skills and interpretation
+                    of engineering drawings for field implementation.
+                </p>
+            </div>
+        </article>
+    </div>
+</section>
 
         <!-- Experience -->
         <section
@@ -253,7 +453,7 @@
             class="experience section-container section-spacing"
         >
             <div class="section-heading">
-                <p class="section-number">03 / EXPERIENCE</p>
+                <p class="section-number">04 / EXPERIENCE</p>
 
                 <h2>
                     Research depth.<br>
@@ -320,7 +520,7 @@
         <section id="research" class="research section-spacing">
             <div class="section-container research-layout">
                 <div class="research-heading">
-                    <p class="section-number light">04 / RESEARCH</p>
+                    <p class="section-number light">05 / RESEARCH</p>
 
                     <h2>
                         Hydrogen safety,<br>
@@ -374,6 +574,134 @@
                 </article>
             </div>
         </section>
+        <!-- Research and publication pipeline -->
+<section
+    class="research-pipeline section-container section-spacing"
+    aria-labelledby="pipeline-title"
+>
+    <div class="pipeline-heading">
+        <div>
+            <p class="section-number">
+                06 / PUBLICATION PIPELINE
+            </p>
+
+            <h2 id="pipeline-title">
+                Research moving from
+                <em>simulation to publication.</em>
+            </h2>
+        </div>
+
+        <p>
+            Current research outputs spanning validated hydrogen
+            combustion modelling, scientific-computing workflows
+            and computer-vision-based flow diagnostics.
+        </p>
+    </div>
+
+    <div class="pipeline-grid">
+        <!-- Accepted conference paper -->
+        <article class="pipeline-card">
+            <div class="pipeline-card-header">
+                <span class="pipeline-index">01</span>
+
+                <span class="status-badge status-accepted">
+                    Accepted
+                </span>
+            </div>
+
+            <p class="pipeline-type">
+                CONFERENCE PAPER · ORAL PRESENTATION
+            </p>
+
+            <h3>
+                Hydrogen Explosion Dynamics in Complex Geometries:
+                CFD–Experiment Comparison Using PDRFoam
+            </h3>
+
+            <p>
+                Validation of hydrogen deflagration simulations
+                against experiments across complex and congested
+                geometries.
+            </p>
+
+            <div class="pipeline-meta">
+                <span>ISHPMIE 2026</span>
+                <span>Kaohsiung, Taiwan</span>
+            </div>
+        </article>
+
+        <!-- IJHE manuscript -->
+        <article class="pipeline-card">
+            <div class="pipeline-card-header">
+                <span class="pipeline-index">02</span>
+
+                <span class="status-badge status-preparation">
+                    Manuscript in preparation
+                </span>
+            </div>
+
+            <p class="pipeline-type">
+                JOURNAL MANUSCRIPT · HYDROGEN COMBUSTION
+            </p>
+
+            <h3>
+                Hydrogen-Capable PDRFoam Validation for
+                Congested Deflagrations
+            </h3>
+
+            <p>
+                Development and validation of bounded flame-speed
+                and flame-wrinkling formulations for hydrogen
+                deflagration modelling over extended operating
+                conditions.
+            </p>
+
+            <div class="pipeline-meta">
+                <span>
+                    Target: International Journal of Hydrogen Energy
+                </span>
+
+                <span>CFD–experiment validation</span>
+            </div>
+        </article>
+
+        <!-- SEA-RAFT research -->
+        <article class="pipeline-card">
+            <div class="pipeline-card-header">
+                <span class="pipeline-index">03</span>
+
+                <span class="status-badge status-progress">
+                    Research in progress
+                </span>
+            </div>
+
+            <p class="pipeline-type">
+                COMPUTER VISION · FLOW DIAGNOSTICS
+            </p>
+
+            <h3>
+                SEA-RAFT-Based Visualization of Transient
+                Wake Dynamics in Combustion Imaging
+            </h3>
+
+            <p>
+                A time-resolved optical-flow workflow connecting
+                combustion imaging with CFD velocity fields,
+                virtual probes and coherent-structure analysis.
+            </p>
+
+            <div class="pipeline-meta">
+                <span>SEA-RAFT</span>
+                <span>Python · PyTorch · OpenCV</span>
+            </div>
+        </article>
+    </div>
+
+    <p class="pipeline-note">
+        Status information reflects the current stage of each work
+        and will be updated following submission or publication.
+    </p>
+</section>
 
         <!-- Projects -->
         <section
@@ -382,7 +710,7 @@
         >
             <div class="projects-heading">
                 <div>
-                    <p class="section-number">05 / SELECTED WORK</p>
+                    <p class="section-number">07 / SELECTED WORK</p>
 
                     <h2>
                         From simulation<br>
@@ -509,12 +837,183 @@
             </div>
         </section>
 
+        <!-- Code and workflow showcase -->
+        <section
+            id="code-workflow"
+            class="code-showcase section-spacing"
+            aria-labelledby="code-showcase-title"
+        >
+            <div class="section-container">
+                <div class="code-showcase-heading">
+                    <div>
+                        <p class="section-number light">08 / CODE &amp; WORKFLOW</p>
+                        <h2 id="code-showcase-title">
+                            Reproducible workflows from
+                            <em>raw data to engineering evidence.</em>
+                        </h2>
+                    </div>
+
+                    <p>
+                        Selected examples of how I structure scientific data,
+                        compare CFD with experiments, analyse optical flow and
+                        prepare publication-ready results.
+                    </p>
+                </div>
+
+                <div class="workflow-stages" aria-label="Research workflow">
+                    <article>
+                        <span>01</span>
+                        <h3>Acquire</h3>
+                        <p>Collect transient CFD fields, probe data and experimental measurements.</p>
+                    </article>
+                    <article>
+                        <span>02</span>
+                        <h3>Process</h3>
+                        <p>Clean, synchronise and transform numerical and imaging datasets.</p>
+                    </article>
+                    <article>
+                        <span>03</span>
+                        <h3>Validate</h3>
+                        <p>Quantify agreement using aligned signals, error metrics and physics checks.</p>
+                    </article>
+                    <article>
+                        <span>04</span>
+                        <h3>Communicate</h3>
+                        <p>Create traceable figures, animations and publication-ready outputs.</p>
+                    </article>
+                </div>
+
+                <div class="code-browser">
+                    <div class="code-browser-header">
+                        <div class="code-tabs" role="tablist" aria-label="Code examples">
+                            <button
+                                id="validation-tab"
+                                class="code-tab active"
+                                type="button"
+                                role="tab"
+                                aria-selected="true"
+                                aria-controls="validation-panel"
+                                tabindex="0"
+                            >Validation</button>
+                            <button
+                                id="flow-tab"
+                                class="code-tab"
+                                type="button"
+                                role="tab"
+                                aria-selected="false"
+                                aria-controls="flow-panel"
+                                tabindex="-1"
+                            >Optical flow</button>
+                            <button
+                                id="plotting-tab"
+                                class="code-tab"
+                                type="button"
+                                role="tab"
+                                aria-selected="false"
+                                aria-controls="plotting-panel"
+                                tabindex="-1"
+                            >Plotting</button>
+                        </div>
+
+                        <button
+                            id="copy-code-button"
+                            class="copy-code-button"
+                            type="button"
+                            data-copy-target="validation-code"
+                        >Copy code <span aria-hidden="true">⧉</span></button>
+                    </div>
+
+                    <div
+                        id="validation-panel"
+                        class="code-panel"
+                        role="tabpanel"
+                        aria-labelledby="validation-tab"
+                    >
+<pre><code id="validation-code">import numpy as np
+import pandas as pd
+
+cfd = pd.read_csv("cfd_pressure.csv")
+exp = pd.read_csv("experiment_pressure.csv")
+
+aligned = pd.merge_asof(
+    exp.sort_values("time"),
+    cfd.sort_values("time"),
+    on="time",
+    direction="nearest",
+    tolerance=1e-4,
+).dropna()
+
+rmse = np.sqrt(np.mean(
+    (aligned["pressure_exp"] - aligned["pressure_cfd"]) ** 2
+))
+print(f"Pressure RMSE: {rmse:.3f} Pa")</code></pre>
+                    </div>
+
+                    <div
+                        id="flow-panel"
+                        class="code-panel"
+                        role="tabpanel"
+                        aria-labelledby="flow-tab"
+                        hidden
+                    >
+<pre><code id="flow-code">import numpy as np
+import matplotlib.pyplot as plt
+
+flow = np.load("sea_raft_flow.npy")
+u, v = flow[..., 0], flow[..., 1]
+speed = np.hypot(u, v)
+
+plt.imshow(speed, cmap="turbo", origin="lower")
+plt.colorbar(label="Velocity magnitude [px/frame]")
+plt.title("SEA-RAFT transient wake field")
+plt.tight_layout()
+plt.show()</code></pre>
+                    </div>
+
+                    <div
+                        id="plotting-panel"
+                        class="code-panel"
+                        role="tabpanel"
+                        aria-labelledby="plotting-tab"
+                        hidden
+                    >
+<pre><code id="plotting-code">import matplotlib.pyplot as plt
+
+fig, ax = plt.subplots(figsize=(7.2, 4.2))
+ax.plot(exp_time, exp_pressure, "k-", label="Experiment")
+ax.plot(cfd_time, cfd_pressure, "#2563eb", label="CFD")
+ax.set(xlabel="Time [s]", ylabel="Overpressure [Pa]")
+ax.grid(alpha=0.25)
+ax.legend(frameon=False)
+fig.tight_layout()
+fig.savefig("pressure_validation.pdf", bbox_inches="tight")</code></pre>
+                    </div>
+
+                    <p
+                        id="code-copy-status"
+                        class="code-copy-status"
+                        role="status"
+                        aria-live="polite"
+                    ></p>
+                </div>
+
+                <div class="code-showcase-footer">
+                    <p>More scientific-computing work and project updates are available on GitHub.</p>
+                    <a
+                        href="https://github.com/ashok212422"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                    >View GitHub profile <span aria-hidden="true">↗</span></a>
+                </div>
+            </div>
+        </section>
+
         <!-- Contact -->
         <section
             id="contact"
             class="contact section-container section-spacing"
         >
-            <p class="section-number">06 / LET'S CONNECT</p>
+            <p class="section-number">09 / LET'S CONNECT</p>
 
             <h2>
                 Looking for an engineer who can move between
@@ -527,13 +1026,34 @@
                 engineering simulation.
             </p>
 
-            <a
-                href="mailto:ashok212422@gmail.com?subject=Placement opportunity - Ashok Choudhary"
-                class="button button-primary"
-            >
-                Start a conversation
-                <span aria-hidden="true">↗</span>
-            </a>
+            <div class="contact-actions">
+    <a
+        href="https://mail.google.com/mail/?view=cm&amp;fs=1&amp;to=ashok212422@gmail.com&amp;su=Placement%20Opportunity%20for%20Ashok%20Choudhary"
+        class="button button-primary"
+        target="_blank"
+        rel="noopener noreferrer"
+    >
+        Start a conversation
+        <span aria-hidden="true">↗</span>
+    </a>
+
+    <button
+        id="copy-email"
+        class="button button-secondary"
+        type="button"
+        data-email="ashok212422@gmail.com"
+    >
+        Copy email
+        <span aria-hidden="true">⧉</span>
+    </button>
+</div>
+
+<p
+    id="copy-status"
+    class="copy-status"
+    role="status"
+    aria-live="polite"
+></p>
 
             <div class="social-links">
                 <a
@@ -558,6 +1078,14 @@
                     rel="noopener noreferrer"
                 >
                     ResearchGate ↗
+                </a>
+
+                <a
+                    href="https://scholar.google.com/citations?view_op=new_profile&amp;hl=en"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                >
+                    Google Scholar ↗
                 </a>
             </div>
         </section>
