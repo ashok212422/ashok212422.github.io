@@ -2397,3 +2397,91 @@ html[data-theme="dark"] .status-progress {
         transition: none;
     }
 }
+/* =========================================================
+   PROJECT RESULT IMAGES AND REPOSITORY LINKS
+   ========================================================= */
+
+.project-image-visual {
+    background: #071326;
+}
+
+.project-image-visual img {
+    display: block;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    transition: transform 450ms ease;
+    width: 100%;
+}
+
+.project-card:hover .project-image-visual img {
+    transform: scale(1.035);
+}
+
+.project-note {
+    border-left: 3px solid var(--blue);
+    color: var(--text-secondary);
+    font-size: 0.78rem !important;
+    margin-top: 16px;
+    padding-left: 12px;
+}
+
+.project-links {
+    border-top: 1px solid var(--border);
+    margin-top: 23px;
+    padding-top: 18px;
+}
+
+.project-links a {
+    align-items: center;
+    color: var(--blue);
+    display: inline-flex;
+    font-size: 0.78rem;
+    font-weight: 900;
+    gap: 10px;
+    letter-spacing: 0.02em;
+    transition:
+        gap var(--transition),
+        color var(--transition);
+}
+
+.project-links a:hover,
+.project-links a:focus-visible {
+    gap: 15px;
+}
+
+html[data-theme="dark"] .project-note {
+    color: #b9c6d9;
+}
+
+html[data-theme="dark"] .project-links {
+    border-top-color: #30445f;
+}
+
+@media (max-width: 1050px) {
+    .project-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+}
+
+@media (max-width: 700px) {
+    .project-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .project-image-visual {
+        height: 235px;
+    }
+}
+
+@media (hover: none) {
+    .project-card:hover .project-image-visual img {
+        transform: none;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .project-image-visual img {
+        transition: none;
+    }
+}
