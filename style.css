@@ -1143,3 +1143,32 @@ button:focus-visible {
         width: 100%;
     }
 }
+/* =========================================================
+   HYDROGEN CFD PROJECT VIDEO
+   ========================================================= */
+
+.video-visual {
+    background: #050b17;
+}
+
+.project-video {
+    background: #050b17;
+    display: block;
+    height: 100%;
+    object-fit: contain;
+    width: 100%;
+}
+
+.project-video:focus-visible {
+    outline: 3px solid #1457d9;
+    outline-offset: -3px;
+}
+
+/*
+ * The project number must remain visible above the video.
+ */
+
+.video-visual > span {
+    pointer-events: none;
+    z-index: 3;
+}

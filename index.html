@@ -397,14 +397,28 @@
             </div>
 
             <div class="project-grid">
-                <article class="project-card">
-                    <div class="project-visual visual-combustion">
+                               <article class="project-card">
+                    <div class="project-visual visual-combustion video-visual">
                         <span>01</span>
 
-                        <div class="flow-lines" aria-hidden="true">
-                            <i></i><i></i><i></i>
-                            <i></i><i></i><i></i>
-                        </div>
+                        <video
+                            class="project-video"
+                            autoplay
+                            muted
+                            loop
+                            playsinline
+                            controls
+                            preload="metadata"
+                            poster="assets/images/hydrogen-animation-poster.jpg"
+                            aria-label="Hydrogen deflagration CFD animation in a congested geometry"
+                        >
+                            <source
+                                src="assets/videos/hydrogen-deflagration.mp4"
+                                type="video/mp4"
+                            >
+
+                            Your browser does not support the HTML video element.
+                        </video>
                     </div>
 
                     <p class="project-category">
